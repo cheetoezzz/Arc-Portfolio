@@ -132,19 +132,19 @@ h1 {
 
 .about-section {
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .about {
-  height: 40vh;
+  height: auto;
   max-width: 50%;
   width: 50%;
 }
 
 .skills {
-  height: 40vh;
+  height: auto;
   max-width: 50%;
   width: 50%;
   margin-left: 20px;
@@ -163,7 +163,7 @@ h1 {
 }
 
 .skills-title {
-  color: #CC5500;
+  color: #cc5500;
 }
 
 .about-text {
@@ -174,7 +174,7 @@ h1 {
 
 .skills-items {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding-top: 1rem;
 }
@@ -202,12 +202,14 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap; 
   padding: 2rem;
 }
 
 .card {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
+  max-width: 100%;
 }
 
 .card:hover {
@@ -216,4 +218,77 @@ h1 {
 
 .footer {
   margin-top: 10rem;
+}
+
+@media (max-width: 480px) {
+  .pfp {
+    height: 150px;
+    border-radius: 30px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-name {
+    font-size: 0.8rem;
+  }
+
+  .arc,
+  .batman {
+    font-size: 1.2rem;
+  }
+
+  .small-text {
+    font-size: 0.6rem;
+  }
+
+  .socials {
+    gap: 0.5rem;
+  }
+}
+
+
+@media (max-width: 630px) {
+  .about-section {
+    flex-direction: column; 
+    align-items: start;
+  }
+
+  .about,
+  .skills {
+    max-width: 100%;
+    width: 100%;
+    text-align: start; 
+  }
+
+  .skills-items {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 630px) {
+  .skills-items {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    margin-left: 1rem;
+  }
+
+  .project-container {
+    gap: 1rem; 
+  }
+
+  .card {
+    max-width: 100%;
+    margin-bottom: 1rem; 
+  }
+}
+
+@media (max-width: 630px) {
+  .vertical-line {
+    width: 100%; /* Make it a full-width horizontal line */
+    height: 2px; /* Reduce the height to make it horizontal */
+    margin: 1rem 0; /* Adjust the margin for proper spacing */
+  }
 }
