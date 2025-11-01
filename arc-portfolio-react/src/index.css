@@ -1,0 +1,27 @@
+/* Modern gradient color palette */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --dark-gradient: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  --light-gradient: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  
+  --primary-color: #667eea;
+  --secondary-color: #f5576c;
+  --accent-color: #00d4ff;
+  --text-dark: #1a202c;
+  --text-light: #718096;
+}
+
+/* Base resets */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
